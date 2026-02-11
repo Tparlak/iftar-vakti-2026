@@ -90,8 +90,8 @@ export default function ImsakiyePage() {
                             </button>
                         </div>
 
-                        <div className="overflow-x-auto rounded-xl border border-border-color">
-                            <table className="imsakiye-table w-full text-sm">
+                        <div className="imsakiye-table-container">
+                            <table className="imsakiye-table">
                                 <thead>
                                     <tr>
                                         <th className="rounded-tl-xl text-center">Gün</th>

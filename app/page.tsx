@@ -138,7 +138,7 @@ export default function Home() {
 
                 <div className="relative mb-8 group cursor-default">
                   <div className="absolute -inset-8 bg-primary/30 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <p className="relative text-white text-6xl md:text-8xl lg:text-9xl font-bold font-mono tracking-tighter tabular-nums leading-none select-none text-shadow-xl drop-shadow-2xl">
+                  <p className="relative text-white text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold font-mono tracking-tighter tabular-nums leading-none select-none text-shadow-xl drop-shadow-2xl">
                     {countdown}
                   </p>
                 </div>
@@ -282,31 +282,31 @@ export default function Home() {
       {/* Quick Links */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 animate-fade-in-up stagger-5">
         <Link href="/tesbih" className="no-underline group">
-          <div className="prayer-card text-center py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
-            <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform">📿</span>
-            <h3 className="text-sm font-bold mb-1 font-poppins text-primary">Tesbih</h3>
-            <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Zikirmatik</p>
+          <div className="prayer-card text-center py-5 sm:py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
+            <span className="text-2xl sm:text-3xl mb-2 sm:mb-3 block group-hover:scale-110 transition-transform">📿</span>
+            <h3 className="text-xs sm:text-sm font-bold mb-0.5 sm:mb-1 font-poppins text-primary uppercase">Tesbih</h3>
+            <p className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-widest opacity-70">Zikirmatik</p>
           </div>
         </Link>
         <Link href="/dua" className="no-underline group">
-          <div className="prayer-card text-center py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
-            <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform">📖</span>
-            <h3 className="text-sm font-bold mb-1 font-poppins text-primary">Dualar</h3>
-            <p className="text-[10px] text-muted-foreground uppercase tracking-widest">İftar & Sahur</p>
+          <div className="prayer-card text-center py-5 sm:py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
+            <span className="text-2xl sm:text-3xl mb-2 sm:mb-3 block group-hover:scale-110 transition-transform">📖</span>
+            <h3 className="text-xs sm:text-sm font-bold mb-0.5 sm:mb-1 font-poppins text-primary uppercase">Dualar</h3>
+            <p className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-widest opacity-70">İftar & Sahur</p>
           </div>
         </Link>
         <Link href="/hadis" className="no-underline group">
-          <div className="prayer-card text-center py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
-            <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform">📜</span>
-            <h3 className="text-sm font-bold mb-1 font-poppins text-primary">Hadisler</h3>
-            <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Günün Sözü</p>
+          <div className="prayer-card text-center py-5 sm:py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
+            <span className="text-2xl sm:text-3xl mb-2 sm:mb-3 block group-hover:scale-110 transition-transform">📜</span>
+            <h3 className="text-xs sm:text-sm font-bold mb-0.5 sm:mb-1 font-poppins text-primary uppercase">Hadisler</h3>
+            <p className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-widest opacity-70">Günün Sözü</p>
           </div>
         </Link>
         <Link href="/imsakiye" className="no-underline group">
-          <div className="prayer-card text-center py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
-            <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform">📅</span>
-            <h3 className="text-sm font-bold mb-1 font-poppins text-primary">İmsakiye</h3>
-            <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Aylık Takvim</p>
+          <div className="prayer-card text-center py-5 sm:py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
+            <span className="text-2xl sm:text-3xl mb-2 sm:mb-3 block group-hover:scale-110 transition-transform">📅</span>
+            <h3 className="text-xs sm:text-sm font-bold mb-0.5 sm:mb-1 font-poppins text-primary uppercase">İmsakiye</h3>
+            <p className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-widest opacity-70">Aylık Takvim</p>
           </div>
         </Link>
       </section>

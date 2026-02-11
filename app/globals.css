@@ -51,10 +51,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 html {
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 body {
@@ -64,7 +67,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
 }
 
 /* Scrollbar */
@@ -403,10 +409,19 @@ body {
 }
 
 /* Imsakiye Table */
+.imsakiye-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
 .imsakiye-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  min-width: 600px;
 }
 
 .imsakiye-table th {

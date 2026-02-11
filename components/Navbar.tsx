@@ -119,7 +119,7 @@ export function Navbar() {
                                 <div className={`p-2 rounded-2xl transition-all duration-500 ${isActive ? "shadow-[0_0_20px_rgba(30,126,52,0.3)] bg-primary/20" : ""}`}>
                                     <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} />
                                 </div>
-                                <span className={`text-[9px] font-bold tracking-tighter transition-colors mt-1 ${isActive ? "opacity-100" : "opacity-60"}`}
+                                <span className={`text-[10px] font-bold tracking-tight transition-all mt-1 ${isActive ? "opacity-100 translate-y-0" : "opacity-60 translate-y-0.5"}`}
                                     style={isActive ? { color: "var(--primary)" } : {}}>
                                     {item.label}
                                 </span>
