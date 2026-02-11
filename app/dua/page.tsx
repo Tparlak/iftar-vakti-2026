@@ -26,22 +26,24 @@ export default function DuaPage() {
                 </p>
             </div>
 
-            <div className="flex gap-2 p-1 bg-muted/10 rounded-2xl animate-fade-in-up stagger-1 border border-border-color">
-                {["dua", "hadis", "tesbih"].map((tab) => (
-                    <button
-                        key={tab}
-                        onClick={() => setActiveTab(tab as any)}
-                        className={`flex-1 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center justify-center gap-2 ${activeTab === tab
-                                ? "bg-primary text-white shadow-md"
+            <div className="sticky top-16 z-40 py-2 bg-background/80 backdrop-blur-xl -mx-4 px-4 sm:mx-0 sm:px-0">
+                <div className="flex gap-2 p-1 bg-muted/10 rounded-2xl animate-fade-in-up stagger-1 border border-border-color shadow-lg">
+                    {["dua", "hadis", "tesbih"].map((tab) => (
+                        <button
+                            key={tab}
+                            onClick={() => setActiveTab(tab as any)}
+                            className={`flex-1 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center justify-center gap-2 ${activeTab === tab
+                                ? "bg-primary text-white shadow-md scale-[1.02]"
                                 : "text-muted-foreground hover:bg-muted/5 hover:text-foreground"
-                            }`}
-                    >
-                        {tab === "dua" && "🤲"}
-                        {tab === "hadis" && "📖"}
-                        {tab === "tesbih" && "📿"}
-                        <span className="capitalize">{tab === "tesbih" ? "Tesbih" : tab + "lar"}</span>
-                    </button>
-                ))}
+                                }`}
+                        >
+                            {tab === "dua" && "🤲"}
+                            {tab === "hadis" && "📖"}
+                            {tab === "tesbih" && "📿"}
+                            <span className="capitalize">{tab === "tesbih" ? "Tesbih" : tab + "lar"}</span>
+                        </button>
+                    ))}
+                </div>
             </div>
 
             <div className="space-y-4">

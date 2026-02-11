@@ -66,7 +66,7 @@ export default function RootLayout({
           <Onboarding />
           <InstallPrompt />
           <SlidingBanner />
-          <main className="min-h-screen pt-32 md:pt-44 pb-48 md:pb-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <main className="min-h-screen pt-32 md:pt-44 pb-72 md:pb-60 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {children}
           </main>
         </AppProvider>
