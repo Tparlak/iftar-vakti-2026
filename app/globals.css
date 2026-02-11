@@ -1,0 +1,532 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1e7e34;
+  --primary-light: #27a844;
+  --primary-dark: #0d3d1a;
+  --secondary: gold;
+  --secondary-light: #ffe44d;
+  --secondary-dark: #b89b00;
+  --accent: #ff6b35;
+  --accent-light: #ff8a5c;
+
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #fff;
+  --bg-card: #fff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-color: #e2e8f0;
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.3);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 30px rgba(30, 126, 52, 0.15);
+
+  --gradient-islamic: linear-gradient(135deg, #1e7e34 0%, #0d3d1a 100%);
+  --gradient-sunset: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  --gradient-gold: linear-gradient(135deg, gold 0%, #f0c000 100%);
+  --gradient-hero: linear-gradient(180deg, #0d3d1a 0%, #1e7e34 50%, #27a844 100%);
+}
+
+.dark {
+  --bg-primary: #0f1117;
+  --bg-secondary: #1a1d27;
+  --bg-card: #1e2230;
+  --text-primary: #f0f0f5;
+  --text-secondary: #a0aec0;
+  --text-muted: #718096;
+  --border-color: #2d3748;
+  --glass-bg: rgba(30, 34, 48, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(30, 126, 52, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(30, 126, 52, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(30, 126, 52, 0.4);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes countdown-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+.hero-gradient {
+  background: var(--gradient-hero);
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-countdown-pulse {
+  animation: countdown-pulse 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s infinite;
+}
+
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+
+.stagger-6 {
+  animation-delay: 0.6s;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Prayer Card */
+.prayer-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.prayer-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-islamic);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.prayer-card:hover::before {
+  opacity: 1;
+}
+
+.prayer-card:hover {
+  box-shadow: var(--shadow-glow);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.prayer-card.active {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.prayer-card.active::before {
+  opacity: 1;
+}
+
+/* Countdown */
+.countdown-digit {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  background: var(--gradient-islamic);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.dark .countdown-digit {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.countdown-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 90px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+
+.countdown-box:hover {
+  box-shadow: var(--shadow-glow);
+  border-color: var(--primary);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--gradient-islamic);
+  border-radius: 999px;
+  transition: width 1s;
+  position: relative;
+}
+
+.progress-bar-fill::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--bg-card);
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px rgba(30, 126, 52, 0.4);
+}
+
+/* Islamic Pattern */
+.islamic-pattern {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e7e34' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dark .islamic-pattern {
+  opacity: 0.02;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 48px;
+  height: 26px;
+  background: var(--border-color);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: none;
+}
+
+.toggle-switch.active {
+  background: var(--primary);
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-switch.active::after {
+  transform: translateX(22px);
+}
+
+/* Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, var(--border-color) 25%, rgba(255, 255, 255, 0.1) 50%, var(--border-color) 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Imsakiye Table */
+.imsakiye-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.imsakiye-table th {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.imsakiye-table th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.imsakiye-table th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.imsakiye-table td {
+  padding: 0.625rem 0.5rem;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.imsakiye-table tr:hover td {
+  background: rgba(30, 126, 52, 0.04);
+}
+
+.imsakiye-table tr.today td {
+  background: rgba(30, 126, 52, 0.08);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Tasbih Button */
+.tasbih-btn {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--gradient-islamic);
+  border: 4px solid var(--secondary);
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  box-shadow: 0 8px 30px rgba(30, 126, 52, 0.3);
+}
+
+.tasbih-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 15px rgba(30, 126, 52, 0.4);
+}
+
+/* Compass */
+.compass-ring {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.compass-needle {
+  width: 4px;
+  height: 120px;
+  background: linear-gradient(180deg, var(--primary) 50%, var(--accent) 50%);
+  border-radius: 2px;
+  position: absolute;
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Page Container - Handled by Layout now */
+.page-container {
+  width: 100%;
+}
+
+/* Custom Scrollbar for lists */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Safe area for mobile bottom nav */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Marquee Animation for Bottom Banner */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
