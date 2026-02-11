@@ -293,7 +293,7 @@ export default function Home() {
             <p className="text-[10px] text-muted-foreground uppercase tracking-widest">İftar & Sahur</p>
           </div>
         </Link>
-        <Link href="/dua" className="no-underline group">
+        <Link href="/hadis" className="no-underline group">
           <div className="prayer-card text-center py-6 cursor-pointer hover:bg-primary/5 transition-all group-hover:-translate-y-2 group-hover:shadow-primary/20">
             <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform">📜</span>
             <h3 className="text-sm font-bold mb-1 font-poppins text-primary">Hadisler</h3>
