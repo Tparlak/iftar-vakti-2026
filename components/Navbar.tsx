@@ -47,9 +47,9 @@ export function Navbar() {
             <nav className="fixed top-0 left-0 right-0 z-[1000] h-16 border-b border-white/10 bg-[#1a1a2e]/80 backdrop-blur-xl transition-all duration-300 shadow-lg">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-lg shadow-primary/20"
-                            style={{ background: "rgba(30,126,52,0.1)", color: "var(--primary)" }}>
-                            <Moon size={22} className="fill-current" />
+                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 shadow-lg shadow-primary/20 overflow-hidden"
+                            style={{ background: "rgba(30,126,52,0.1)" }}>
+                            <img src="/logo.svg" alt="İftar Vakti Logo" className="w-8 h-8 object-contain transform group-hover:scale-110 transition-transform duration-500" />
                         </div>
                         <div className="flex flex-col leading-none">
                             <span className="font-bold text-xl tracking-tight text-white" style={{ fontFamily: "Poppins, sans-serif" }}>

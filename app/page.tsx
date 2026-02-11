@@ -102,7 +102,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 md:mb-10">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl animate-pulse">🌙</span>
+                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-xl overflow-hidden animate-pulse">
+                  <img src="/logo.svg" alt="Logo" className="w-10 h-10 object-contain" />
+                </div>
                 <h2 className="text-white text-2xl md:text-4xl font-bold font-poppins tracking-tight">
                   {getGreeting()}
                 </h2>
