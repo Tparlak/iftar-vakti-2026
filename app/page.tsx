@@ -98,18 +98,20 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-10"
           style={{ background: "radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%)", transform: "translate(-20%, 20%)" }}></div>
 
-        <div className="relative z-10 w-full pt-4 md:pt-6">
+        <div className="relative z-10 w-full pt-10 md:pt-16">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 md:mb-10">
             <div>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-xl overflow-hidden animate-pulse">
-                  <img src="/logo.svg" alt="Logo" className="w-10 h-10 object-contain" />
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl overflow-hidden animate-pulse">
+                  <img src="/logo.svg" alt="Logo" className="w-12 h-12 object-contain" />
                 </div>
-                <h2 className="text-white text-2xl md:text-4xl font-bold font-poppins tracking-tight">
+                <h2 className="text-white text-3xl md:text-5xl font-bold font-poppins tracking-tight drop-shadow-lg">
                   {getGreeting()}
                 </h2>
               </div>
-              <p className="text-green-100 text-base font-medium opacity-90 pl-1">Allah kabul etsin</p>
+              <p className="text-white/90 text-xl font-medium opacity-100 pl-1 mt-3 italic drop-shadow-md">
+                Allah kabul etsin
+              </p>
             </div>
 
             <Link href="/ayarlar" className="self-start md:self-auto">
